@@ -94,21 +94,24 @@ header li a::after {
   width: 0%;
   height: 3px;
   display: block;
-  background-color: #3f3d56;
-  margin-top: 3px;
+  background-color: #c1c1df;
 }
 header li a:hover::after {
   width: 100%;
   transition: all 0.5s;
 }
-
+.current {
+  width: 100%;
+  border-bottom: 3px solid #c1c1df;
+  transition: all 0.5s;
+  padding-bottom: 1px;
+}
 /* biography */
 main {
   min-height: 80vh;
 }
 .biography {
   display: flex;
-  flex-wrap: wrap;
   width: 80%;
   margin: auto;
   overflow: hidden;
@@ -117,16 +120,16 @@ main {
 .aboutShina {
   display: flex;
   flex: 1 3 30rem;
-  margin-right: 4%;
 }
 .aboutShina h2 {
   font-size: var(--header6);
   font-family: "Jost", sans-serif;
   font-weight: lighter;
-  padding-right: 9rem;
-  border-right: #c1c1df 2px solid;
-  height: 40rem;
+  border-right: #c1c1df 3px solid;
+  height: 50rem;
+  width: 30rem;
   transition: 0.3s ease-in-out all;
+  margin-right: 3rem;
 }
 
 .biography-text {
@@ -142,6 +145,79 @@ main {
 }
 
 /* blog */
+.blog-page {
+  margin: 5rem 0;
+}
+hr {
+  width: 70%;
+  height: 3px;
+  margin: 3rem auto 3rem auto;
+  border: none;
+  background-color: #c1c1df;
+  transition: 0.3s ease-in-out all;
+}
+.blog {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  justify-content: space-evenly;
+}
+.blog-img {
+  flex: 1 2 30rem;
+}
+.blog-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s ease-in-out all;
+}
+.blog-text {
+  flex: 2 1 40rem;
+  text-align: justify;
+}
+.blog-text p {
+  margin: 0 auto 3rem 3rem;
+  transition: 0.3s ease-in-out all;
+  line-height: 1.4;
+  font-size: 1.8rem;
+}
+.blog-text button {
+  font-size: 1.6rem;
+  width: 15rem;
+  padding: 1rem 0;
+  margin: 0 3rem;
+  border: 1px solid black;
+  background: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out all;
+}
+.blog-text button:hover {
+  background: black;
+  color: white;
+}
+@media screen and (max-width: 999px) {
+  .blog {
+    width: 90%;
+    margin: auto;
+  }
+  hr {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 780px) {
+  .blog-text p {
+    margin: 3rem 0rem 3rem 0rem;
+    text-align: justify;
+  }
+  .blog-text button {
+    margin: 0;
+  }
+  .blog-text {
+    text-align: center;
+  }
+}
 
 /* contact */
 .contact-page {
@@ -258,24 +334,25 @@ footer {
   position: relative;
 }
 .footer p {
-  font-size: var(--footer);
+  font-size: 1.2rem;
 }
 
-@media screen and (max-width: 1433px) {
+@media screen and (max-width: 1100px) {
+  .biography {
+    flex-wrap: wrap;
+  }
   .aboutShina h2 {
-    margin-bottom: 5px;
-    border-bottom: #c1c1df 2px solid;
+    margin-bottom: 4rem;
+    border-bottom: #c1c1df 3px solid;
     border-right: none;
     height: 50px;
   }
 }
 
-@media screen and (max-width: 1400px) {
-  .aboutLine {
-    display: none;
-  }
+@media screen and (max-width: 1604px) {
   .aboutShina h2 {
     margin-bottom: 3rem;
+    font-size: 3rem;
   }
   .biography-text p {
     font-size: 1.8rem;

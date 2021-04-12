@@ -116,10 +116,11 @@ body {
   padding: 1rem 5rem;
   border: 3px solid rgb(20, 20, 20);
   margin-bottom: 4rem;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 .hero-introduction a:hover {
-  transform: scale(1.1);
+  background: black;
+  color: white;
 }
 .hero-image {
   flex: 1 1 30rem;
