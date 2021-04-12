@@ -119,7 +119,7 @@ body {
   transition: all 0.4s ease-in-out;
 }
 .hero-introduction a:hover {
-  background: black;
+  background: rgb(20, 20, 20);
   color: white;
 }
 .hero-image {
@@ -137,7 +137,17 @@ body {
 .nav-links a {
   color: white;
   font-size: var(--text);
-  text-decoration: underline;
+}
+header li a::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  display: block;
+  background-color: #c1c1df;
+}
+header li a:hover::after {
+  width: 100%;
+  transition: all 0.5s;
 }
 
 .nav-links {
@@ -205,7 +215,6 @@ body {
   .nav-links a {
     color: white;
     font-size: var(--header3);
-    text-decoration: underline;
   }
 
   .nav-links {
