@@ -136,18 +136,7 @@ body {
 
 .nav-links a {
   color: white;
-  font-size: var(--text);
-}
-header li a::after {
-  content: "";
-  width: 0%;
-  height: 3px;
-  display: block;
-  background-color: #c1c1df;
-}
-header li a:hover::after {
-  width: 100%;
-  transition: all 0.5s;
+  font-size: var(--header3);
 }
 
 .nav-links {
@@ -164,6 +153,18 @@ header li a:hover::after {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+}
+
+header li a::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  display: block;
+  background-color: #727272;
+}
+header li a:hover::after {
+  width: 100%;
+  transition: all 0.5s;
 }
 
 .nav-open {
@@ -213,7 +214,7 @@ header li a:hover::after {
   }
 
   .nav-links a {
-    color: white;
+    color: #ffffff;
     font-size: var(--header3);
   }
 
